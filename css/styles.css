@@ -124,6 +124,22 @@ body {
     vertical-align: middle; 
 }
 
+/* XState Viz iframe styling */
+div.iframe-wrapper[data-component-name="<div />"] {
+    width: 100%;
+    max-width: 80em; /* Wider container */
+    margin: 2rem auto;
+    padding: 0;
+}
+
+div.iframe-wrapper iframe {
+    width: 100% !important;
+    min-width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+}
+
 /* --- Navigation Styles --- */
 #main-nav {
     position: fixed;
