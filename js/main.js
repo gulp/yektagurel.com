@@ -39,7 +39,7 @@ const TEXT_HIGHLIGHTS_PART1 = [
     { phrase: "human", className: "highlight-name" }, 
     { phrase: "interaction designer.", className: "highlight-name" }
 ];
-const LINK_DEFINITIONS_PART2 = [ { phrase: "Drop me a line", href: "mailto:your.email@example.com", type: 'link' }, { phrase: "have a nosey", href: "#your-portfolio-or-link", type: 'link' }];
+const LINK_DEFINITIONS_PART2 = [ { phrase: "Drop me a line", href: "mailto:me@yektagurel.com", type: 'link' }, { phrase: "have a nosey", href: "https://www.linkedin.com/in/yektagurel", type: 'link' }];
 const OVERALL_SPEED_FACTOR = 1 / 1.2; const WELCOME_PART1_SPEED_MULTIPLIER = 1.25; const WELCOME_MESSAGE_SPEED_MULTIPLIER = 2.5; const WELCOME_CHAR_MIN_DELAY_MS = 10;
 const INITIAL_BLANK_CURSOR_DELAY_MS = 1000;
 const PAUSE_AFTER_TYPING_MS = 2000; const PAUSE_AFTER_ERASING_MS = 500; const PAUSE_BEFORE_WELCOME_MESSAGE_TYPING_MS = 700;
