@@ -1,0 +1,223 @@
+:root {
+    --typewriter-font-size: 48pt; 
+    --typewriter-small-font-size: 24pt; 
+    --nav-height: 50px; 
+    --pill-border-radius: 17px; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'Manrope', sans-serif;
+    margin: 0; padding: 0; background-color: #0D1018;
+    display: flex; flex-direction: column; align-items: flex-start;
+    min-height: 100vh; box-sizing: border-box;
+    overflow: hidden; 
+    padding-bottom: var(--nav-height); 
+}
+.app-container { 
+    width: 100%; 
+    padding: 2em; 
+    box-sizing: border-box;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.typewriter-base {
+    font-family: 'JetBrains Mono', monospace; 
+    color: #FFFFFF; /* MODIFIED: Default typewriter text color to white */
+    line-height: 1.4; 
+    white-space: pre-wrap; 
+    overflow-wrap: break-word; 
+    width: 100%;
+    box-sizing: border-box; text-align: left; user-select: none;
+    text-wrap: pretty; 
+}
+
+.intro-loop-container {
+    font-size: var(--typewriter-font-size); 
+    min-height: calc(var(--typewriter-font-size) * 1.4 * 1.5); 
+    margin-bottom: 10px;
+}
+.welcome-message-container {
+    font-size: var(--typewriter-font-size); 
+    min-height: calc(var(--typewriter-font-size) * 1.4 * 5); 
+    margin-bottom: 10px;
+}
+
+.typewriter-prefix-pill {
+    background-color: #4a4a4a; 
+    color: #e0e0e0; /* Pill text color */
+    padding: 0em 0.2em;
+    border-radius: var(--pill-border-radius); 
+    margin-right: 0.1em; display: inline-block;
+    line-height: 1.2; vertical-align: baseline;
+}
+.typewriter-prefix-rest-styled { color: #A56573; vertical-align: baseline; }
+.typewriter-prefix-rest-typing { color: #FFFFFF; vertical-align: baseline; } /* Will inherit from .typewriter-base or explicit white */
+
+.typed-text-large { color: #FFFFFF; vertical-align: baseline; } /* Will inherit from .typewriter-base or explicit white */
+.typed-text-dynamic { color: #FFFFFF; vertical-align: baseline; } /* Will inherit from .typewriter-base or explicit white */
+
+.typewriter-small-text-wrapper { 
+    font-size: var(--typewriter-small-font-size); 
+    color: #FFFFFF;
+    display: block;
+    line-height: 1.4; 
+}
+.typewriter-small-text-wrapper a, .highlighted-text { color: #58FF63; }
+.typewriter-small-text-wrapper a:hover { text-decoration: none; }
+.highlight-name { color: #A56573; } 
+.back-link {
+    display: inline-block;
+    /* Add more styles as needed */
+}
+
+.cursor {
+    display: inline-block; 
+    vertical-align: baseline; 
+    height: 1em; 
+    line-height: 1em; 
+    padding-top: 0.1em; 
+    padding-bottom: 0.1em; 
+    background-color: #58FF63; 
+    color: #0D1018;
+}
+
+.imagine-all-button-wrapper { 
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    width: auto; 
+    display: inline-block; 
+    margin-top: 20px; 
+}
+.imagine-all-button-wrapper.visible {
+    opacity: 1;
+}
+.imagine-all-button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'Manrope', sans-serif;
+    font-size: 16px; 
+    font-weight: 500; 
+    background-color: #4f545c; 
+    color: #dcddde;           
+    border: none; 
+    padding: 10px 16px 10px 13px; 
+    border-radius: 4px;       
+    cursor: pointer;
+    transition: background-color 0.17s ease, color 0.17s ease; 
+    display: flex;            
+    align-items: center; 
+    gap: 3px;  
+    line-height: 1.4; 
+}
+.imagine-all-button:hover { background-color: #5d636b; }
+.imagine-all-button:active { background-color: #474c54;}
+.imagine-all-button .emoji { 
+    font-size: 1.1em; 
+    line-height: 1; 
+    display: inline-flex; 
+    align-items: center;
+}
+ .imagine-all-button > span:not(.emoji) { 
+    line-height: 1; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+/* --- Navigation Styles --- */
+#main-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0; 
+    text-align: center;
+    z-index: 1000;
+    height: var(--nav-height);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+}
+
+#main-nav .nav-item { 
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 0; 
+    font-family: 'Manrope', sans-serif; 
+    transition: color 0.17s ease, opacity 0.17s ease; 
+}
+
+#main-nav .nav-link { 
+    font-weight: 600;       
+    color: #9ea2ac;         
+    opacity: 0.96;          
+}
+
+#main-nav .current-page { 
+    /* Add styles for current page if different from hover/default active */
+    font-weight: 700;
+    color: #FFFFFF; /* Example: White color for current page */
+    opacity: 1;
+}
+
+#main-nav .nav-link:hover {
+    color: #FFFFFF; /* Example: White color on hover */
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    :root {
+        --typewriter-font-size: 32pt;
+        --typewriter-small-font-size: 18pt;
+    }
+    .app-container {
+        padding: 1em; 
+    }
+    .intro-loop-container,
+    .welcome-message-container {
+        font-size: var(--typewriter-font-size);
+        min-height: calc(var(--typewriter-font-size) * 1.4 * 1.5);
+    }
+    .typewriter-small-text-wrapper {
+        font-size: var(--typewriter-small-font-size);
+    }
+    .imagine-all-button {
+        font-size: 14px;
+        padding: 8px 12px 8px 10px;
+    }
+    #main-nav {
+        gap: 15px;
+    }
+    #main-nav .nav-item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --typewriter-font-size: 24pt;
+        --typewriter-small-font-size: 15pt;
+        --nav-height: 45px;
+    }
+    .intro-loop-container,
+    .welcome-message-container {
+        font-size: var(--typewriter-font-size);
+        min-height: calc(var(--typewriter-font-size) * 1.4 * 1.5);
+    }
+    .typewriter-small-text-wrapper {
+        font-size: var(--typewriter-small-font-size);
+    }
+    .imagine-all-button {
+        font-size: 13px;
+        padding: 7px 10px 7px 8px;
+    }
+    #main-nav {
+        gap: 10px;
+    }
+    #main-nav .nav-item {
+        font-size: 12px;
+    }
+}
